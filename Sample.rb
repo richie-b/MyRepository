@@ -21,8 +21,11 @@ class Sample < Test::Unit::TestCase
 =begin
   This is the positive test. Since this is the positive test, it involves
   submitting the required information so that the form will submit. Next,
-  5 assertions are performed. Each assertion checks an indicator of a successful
-  submission.  
+  5 assertions are performed. Each assertion checks an assumed indicator of a successful
+  submission. 
+  
+  *Note in practice, a software requirement spec would be used if available
+  to check for a true indicator of a successful submission.
 =end   
   def test_positive_case
      
@@ -68,8 +71,7 @@ class Sample < Test::Unit::TestCase
     I found while testing this that I need to click back on the form after it has been submitted for Ruby to pick up that
     the error message was displayed. If the requirement spec stated that the user should not have to click back on the 
     form to see the highlighted fields, then this most likely is a bug.  
-    
-=end
+ =end
   def test_negative_case
 
     #Check Name or Question Error Message is not enabled 
@@ -101,6 +103,7 @@ class Sample < Test::Unit::TestCase
     
     #Click Off 'No' Check Box
      @driver.find_element(:id, 'group_310473641_2').click 
+   
     #Enters name in form
      @driver.find_element(:id, 'entry_1041466219').send_keys "First Last"
     
