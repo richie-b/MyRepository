@@ -71,7 +71,7 @@ class Sample < Test::Unit::TestCase
     I found while testing this that I need to click back on the form after it has been submitted for Ruby to pick up that
     the error message was displayed. If the requirement spec stated that the user should not have to click back on the 
     form to see the highlighted fields, then this most likely is a bug.  
- =end
+=end
   def test_negative_case
 
     #Check Name or Question Error Message is not enabled 
