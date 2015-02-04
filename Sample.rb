@@ -65,9 +65,9 @@ class Sample < Test::Unit::TestCase
     Next I check that the error message is displayed if the check box alone is clicked. There should be 1 error message.
     Next I check that the error message is displayed if the edit box alone has a value. There should be 1 error message.
   
-    I found while testing this that I need to click back on the form for Ruby to pick up that the error message was displayed.
-    If the requirement spec stated that the user should not have to click back on the form to see the highlighted fields then
-    this most likely is a bug.  
+    I found while testing this that I need to click back on the form after it has been submitted for Ruby to pick up that
+    the error message was displayed. If the requirement spec stated that the user should not have to click back on the 
+    form to see the highlighted fields, then this most likely is a bug.  
     
 =end
   def test_negative_case
